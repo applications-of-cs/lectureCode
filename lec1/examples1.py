@@ -7,6 +7,7 @@ print(print(1), print(2))
 
 # data types w/ some omissions (tuples, sets, etc.)
 # Applciations: http://zetcode.com/lang/python/datatypes/
+print(None)
 print("Integer:", 5)
 print("Floating Point Number:", 5.5)
 print("Boolean:", True, False)
@@ -22,6 +23,7 @@ print("2/2=", 2/2)
 print("2*2=", 2*2)
 print("3/2=", 3/2)
 print("3//2=", 3//2)
+print("5%2=", 5%2)
 
 # functions
 def square(a):
@@ -29,7 +31,7 @@ def square(a):
 
 print("square(2) = ", square(2))
 
-def getAndPrintName(name):
+def printAndReturnName(name):
 	print(name)
 	return name
 
@@ -43,7 +45,7 @@ def variables():
 	return [v1,v2,v3,v4,v5]
 print('[v1,v2,v3,v4,v5] =', variables())
 
-myname = getAndPrintName("felix")
+myname = printAndReturnName("felix")
 print("my name:", myname)
 
 # for and while loops
@@ -62,4 +64,19 @@ def multByAddWhileLoop(a,b):
 		b -= 1
 	return result
 print("multByAddWhileLoop(3,2) =", multByAddWhileLoop(3,2))
+
+# if statements and Truthy/Falsy values
+def fizzbuzz():
+	for i in range(1,101):
+		if (i % 3 == 0 and i % 5 == 0):
+			print('fizzbuzz')
+		elif (i % 3 == 0):
+			print('fizz')
+		elif (i % 5 == 0):
+			print('buzz')
+		else:
+			print(i)
+
+print('fizzbuzz():')
+fizzbuzz()
 
